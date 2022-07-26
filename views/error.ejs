@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./layouts/head.ejs') -%>
+  <body class="bg-light">
+    <div class="container">
+      <%- include('./layouts/navbar.ejs') -%>
+      <main class="min-vh-100">
+        <h1><%= message %></h1>
+        <h2><%= error.status %></h2>
+        <pre><%= error.stack %></pre>
+      </main>
+      <%- include('./layouts/footer.ejs') -%>
+    </div>
+  </body>
+</html>

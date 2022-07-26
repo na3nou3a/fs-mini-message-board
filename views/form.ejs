@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./layouts/head.ejs') -%>
+  <body class="bg-light">
+    <div class="container">
+      <%- include('./layouts/navbar.ejs') -%>
+      <main class="min-vh-100">
+        <div class="w-75 mx-auto">
+          <h1 class="text-success py-2 text-capitalize"><%= title %></h1>
+          <form class="w-100 p-3 mx-auto" action="/new" method="post">
+            <label
+              for="username"
+              class="form-label d-block text-capitalize mb-2"
+              >username:</label
+            >
+            <input
+              type="text"
+              name="username"
+              id="username"
+              class="p-2 w-100"
+              placeholder="Username"
+              required
+            />
+            <label for="message" class="form-label d-block text-capitalize mb-2"
+              >message:</label
+            >
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              required
+              class="w-100"
+            >
+            </textarea>
+            <button
+              class="btn btn-outline-primary d-block mt-2 w-100"
+              type="submit"
+            >
+              submit
+            </button>
+          </form>
+        </div>
+      </main>
+      <%- include('./layouts/footer.ejs') -%>
+    </div>
+  </body>
+</html>
